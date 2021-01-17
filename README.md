@@ -18,10 +18,10 @@ Converting back is straight-forward - first converting the zero-width characters
 
 ## Usage
 ### Plaintext To Zero-Width
-Add the desired content into "Plaintext.txt" and execute the script.  The output ("ToZeroWidth.txt") will contain the zero-width unicode characters, wrapped in double quotes.
+Add the desired content into "Plaintext.txt" and execute the script.  Run the "Zero-Width-Writer" PowerShell script.  The output ("ToZeroWidth.txt") will contain the zero-width unicode characters, wrapped in double quotes.
 
 ### Zero-Width To Plaintext
-Place the text containing zero-width unicode characters into the "ToZeroWidth.txt" file.  The output ("FromZeroWidth.txt") will contain the plaintext.
+Place the text containing zero-width unicode characters into the "ToZeroWidth.txt" file.  Run the "Zero-Width-Reader" PowerShell script.  The output ("FromZeroWidth.txt") will contain the plaintext.
 
 ## Roadmap
 - [ ] Add Python equivalent scripts.
@@ -33,8 +33,3 @@ This program was created by [Cole Chapman](https://github.com/Endrem/).
 
 ## License
 Zero-Width-Characters scripts are made available under the [MIT License](https://choosealicense.com/licenses/mit/).
-
-#Replace the zero-width characters with binary ones.
-#8203 (0x200B) = Zero-Width Space       = " "
-#8204 (0x200C) = Zero-Width Non-Joiner  = "0"
-#8205 (0x200D) = Zero-Width Joiner      = "1"
