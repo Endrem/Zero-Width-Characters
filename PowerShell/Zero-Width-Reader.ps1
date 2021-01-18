@@ -8,7 +8,7 @@ $InputFile = Get-Content -Path ($PSScriptRoot + "\ToZeroWidth.txt")
 # 8205 (0x200D) = Zero-Width Joiner      = "1"
 # Trim the double quotation marks on the start and end of the string.
 # These were placed from the Zero-Width-Writer script for easier identification.
-$InputZeroWidth = ($InputFile).Replace([char]8203," ").Replace([char]8204,"0").Replace([char]8205,"1").Replace('"',"")
+$InputZeroWidth = ($InputFile).Replace([char]8203, " ").Replace([char]8204, "0").Replace([char]8205, "1").Replace('"', "")
 
 # Convert the binary bytes into decimal.
 $InputDecimal = $InputZeroWidth -split " " | ForEach-Object{[System.Convert]::ToInt32($_,2)}

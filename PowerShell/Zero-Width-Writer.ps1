@@ -11,7 +11,7 @@ $InputBinary = [System.Text.Encoding]::Default.GetBytes($InputFile) | ForEach-Ob
 # 8205 (0x200D) = Zero-Width Joiner      = "1"
 # Add double quotation marks on the start and end of the string.
 # These are placed in the script for easier identification.
-$InputZeroWidth = ('"'+$InputBinary+'"').Replace(" ",[char]8203).Replace("0",[char]8204).Replace("1",[char]8205)
+$InputZeroWidth = ('"'+$InputBinary+'"').Replace(" ", [char]8203).Replace("0", [char]8204).Replace("1", [char]8205)
 
 # Save the zero-width contents to our output file.
 Set-Content -Path ($PSScriptRoot + "\ToZeroWidth.txt") -Value $InputZeroWidth

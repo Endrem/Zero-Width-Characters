@@ -24,7 +24,7 @@ Add the desired content into "Plaintext.txt" and execute the script.  Run the "Z
 Place the text containing zero-width unicode characters into the "ToZeroWidth.txt" file.  Run the "Zero-Width-Reader" PowerShell script.  The output ("FromZeroWidth.txt") will contain the plaintext.
 
 ## Roadmap
-- [x] Add Python equivalent scripts.
+- [x] Add Python-equivalent scripts.
 - [ ] Add stealthy PowerShell example script.
 - [ ] Remove either 0x200B or the byte's padding since the opposite can be utilized during reconstruction.
 
