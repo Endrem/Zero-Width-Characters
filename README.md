@@ -34,7 +34,7 @@ It only takes one administrator to overlook this **single** line and inadvertent
 - [ ] Remove either 0x200B or the byte's padding since the opposite can be utilized during reconstruction.
 
 ## Author
-This program was created by [Cole Chapman](https://github.com/Endrem/).
+The contents of this repository were created by [Cole Chapman](https://github.com/Endrem/).
 
 ## License
-Zero-Width-Characters scripts are made available under the [MIT License](https://choosealicense.com/licenses/mit/).
+"Zero-Width-Characters" scripts are made available under the [MIT License](https://choosealicense.com/licenses/mit/).
