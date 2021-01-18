@@ -23,9 +23,14 @@ Add the desired content into "Plaintext.txt" and execute the script.  Run the "Z
 ### Zero-Width To Plaintext
 Place the text containing zero-width unicode characters into the "ToZeroWidth.txt" file.  Run the "Zero-Width-Reader" PowerShell script.  The output ("FromZeroWidth.txt") will contain the plaintext.
 
+### Stealthy Script (PowerShell)
+After using the "Zero-Width-Writer" script, place the entire output (including double quotes) at the beginning of the "Zero-Width-Stealthy" script.  The script utilizes "Invoke-Expression" to execute the hidden code.
+
+It only takes one administrator to overlook this **single** line and inadvertently execute malicious code.  **Hundreds** of lines of malicious code can be hidden within a script like this.
+
 ## Roadmap
 - [x] Add Python-equivalent scripts.
-- [ ] Add stealthy PowerShell example script.
+- [x] Add stealthy PowerShell example script.
 - [ ] Remove either 0x200B or the byte's padding since the opposite can be utilized during reconstruction.
 
 ## Author
