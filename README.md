@@ -7,9 +7,9 @@
 Scripts for zero-width unicode steganography. (Written in PowerShell and Python)
 
 ## Description
-Zero-width unicode characters are characters that are zero pixels wide which allow for different steganography use cases.  Concerns around misuse of these characters have included: journalists inadvertently exposing their sources, covert information leakage, and inattentive admins executing hidden malicious code.
+Zero-width unicode characters are characters that are zero pixels wide which allow for different steganographic uses.  Concerns about the misuse of these characters include: journalists inadvertently exposing their sources, covert information leakage, and inattentive admins executing hidden malicious code.
 
-This topic was one that I've previously researched and created a proof-of-concept of.  The concerns on both OPSEC and enterprise security were intriguing.  One of the more interesting enterprise concerns for me is that an administrator may see a single line of PowerShell code and unknowingly execute thousands.  Revisiting this, I want to expand on my previous work and provide both PowerShell and Python scripts.
+The concerns these characters introduce, on both OPSEC and enterprise security, are intriguing.  One of the more interesting enterprise concerns I find is that an administrator may see a single line of code and unknowingly execute hundreds.
 
 ### How It Works
 First off, there are different ways to achieve this since there are at least ten different zero-width characters.  These scripts currently use three: 0x200B (Space), 0x200C (Non-Joiner), and 0x200D (Joiner).  The plaintext that an actor wants to convert is first turned into binary.  The "0"s are replaced with 0x200C, "1"s are replaced with 0x200D, and spaces between bytes are replaced with 0x200B.  And that's it!  The message is now zero pixels wide and can be copied into documents or programs that support unicode.
