@@ -7,9 +7,9 @@
 Scripts for zero-width unicode steganography. (Written in PowerShell and Python)
 
 ## Description
-Zero-width unicode characters are characters that are zero pixels wide which allow for different steganographic uses.  Concerns about the misuse of these characters include: journalists inadvertently exposing their sources, covert information leakage, and inattentive admins executing hidden malicious code.
+Zero-width unicode characters are characters that are zero pixels wide and which allow for different steganographic uses.  Concerns about the misuse of these characters include: journalists inadvertently exposing their sources, covert information leakage, and inattentive admins executing hidden malicious code.
 
-The concerns these characters introduce, on both OPSEC and enterprise security, are intriguing.  One of the more interesting enterprise concerns I find is that an administrator may see a single line of code and unknowingly execute hundreds.
+The concerns these characters introduce, in both OPSEC and enterprise security, are intriguing.  One of the more interesting enterprise concerns is that an administrator may see a single line of code and unknowingly execute hundreds.
 
 ### How It Works
 First off, there are different ways to achieve this since there are at least ten different zero-width characters.  These scripts currently use three: 0x200B (Space), 0x200C (Non-Joiner), and 0x200D (Joiner).  The plaintext that an actor wants to convert is first turned into binary.  The "0"s are replaced with 0x200C, "1"s are replaced with 0x200D, and spaces between bytes are replaced with 0x200B.  And that's it!  The message is now zero pixels wide and can be copied into documents or programs that support unicode.
@@ -26,7 +26,7 @@ Place the text containing zero-width unicode characters into the "ToZeroWidth.tx
 ### Stealthy Script (PowerShell)
 After using the "Zero-Width-Writer" PowerShell script, place the entire output (including double quotes) at the beginning of the "Zero-Width-Stealthy" script.  The script utilizes "Invoke-Expression" to execute the hidden code.
 
-It only takes one administrator to overlook this **single** line and inadvertently execute malicious code.  **Hundreds** of lines of malicious code can be hidden within a script like this.
+It only takes overlooking a **single** line such as this to inadvertently execute malicious code.  **Hundreds** of lines of malicious code can be hidden within a script like this.
 
 ## Roadmap
 - [x] Add Python-equivalent scripts.
